@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Product_Details</title>
+<style>
+header {
+	color: white;
+	background-color: black;
+	clear: left;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+footer {
+	padding: 18px;
+	color: white;
+	background-color: black;
+	clear: left;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+}
+
+.checkout {
+	text-align: center;
+}
+
+.order {
+	position: absolute;
+	top: 15%;
+	left: 42%;
+	font-size: 40px;
+}
+
+.details {
+	position: absolute;
+	left: 33%;
+	top: 25%;
+	font-size: 20px;
+}
+
+.address {
+	position: absolute;
+	top: 45%;
+	left: 33%;
+}
+
+#address {
+	font-size: 30px
+}
+
+td {
+	font-size: larger;
+}
+</style>
+</head>
+<body>
+	<header>
+		<h1>SHOPPERS</h1>
+	</header>
+	<form action="product_details" method="post">
+		<table border="0px" class="order">
+			<tr>
+				<td id="heading">MY ORDERS</td>
+			</tr>
+			<tr>
+
+				<td id="space"></td>
+			</tr>
+		</table>
+		<table border="0px" cellspacing="20px" cellpadding="20px"
+			class="details">
+			<tr>
+				<td>S.No</td>
+				<td>Product Name</td>
+				<td>Quantity</td>
+				<td>Price</td>
+			</tr>
+		</table>
+		<table class="address">
+			<tr>
+				<td id="address">ADDRESS:</td>
+
+			</tr>
+			<tr>
+				<td></td>
+				<td>Name:</td>
+				<td><input type="text"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Mobile no:</td>
+				<td><input type="text" maxlength="12"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>e-mail:</td>
+				<td><input type="text"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>City:</td>
+				<td><input type="text"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>State:</td>
+				<td><input type="text"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Address:</td>
+				<td><textarea></textarea></td>
+			</tr>
+			<tr>
+				<td><input type="reset" name="reset"></td>
+				<td colspan="3" class="checkout"><input type="submit"
+					value="CheckOut" name="checkout"></td>
+			</tr>
+		</table>
+	</form>
+	<footer> Copyright &copy; SHOPPERS.com </footer>
+</body>
+</html>
