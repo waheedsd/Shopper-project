@@ -13,10 +13,12 @@ public class Menu_Page extends HttpServlet {
 		resp.setContentType("image/jpg");
 		resp.setContentType("text/html");
 
-		String userName = (String) req.getAttribute("uname");
-		String password = (String) req.getAttribute("pword");
+		String userName = (String) req.getParameter("uname");
+		String password = (String) req.getParameter("pword");
 		req.setAttribute("uname", "userName");
 		req.setAttribute("pword", "password");
+		RequestDispatcher rd = req.getRequestDispatcher("/electronics_page");
+		rd.include(req, resp);
 		PrintWriter out = resp.getWriter();
 		out.println("<!DOCTYPE html>");
 		out.println("<head>");
@@ -41,8 +43,8 @@ public class Menu_Page extends HttpServlet {
 		out.println("</table></form></body></html>");
 		out.flush();
 		out.close();
-		RequestDispatcher rd = req.getRequestDispatcher("/electronics_page");
-		rd.forward(req, resp);
+		/*RequestDispatcher rd = req.getRequestDispatcher("/electronics_page");
+		rd.forward(req, resp);*/
 		return;
 	}
 }

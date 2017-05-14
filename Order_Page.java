@@ -16,7 +16,7 @@ public class Order_Page  extends HttpServlet
 	
 	 String refrigerator2 = req.getParameter("refrigerator");
 	 String pricenw=req.getParameter("price");
-	 Double price2=Double.parseDouble(pricenw);
+/*	 Double price2=Double.parseDouble(pricenw);*/
 	 int qty=1;
 	 PrintWriter out=resp.getWriter();
 	 out.println("<!DOCTYPE html>");
@@ -58,7 +58,7 @@ public class Order_Page  extends HttpServlet
 			con=DriverManager.getConnection("jdbc:mysql://localhost:3306?user=root&password=dinga");
 			pstmt=con.prepareStatement(qry);
 			pstmt.setString(1, refrigerator2);
-			pstmt.setDouble(2, price2);
+		//	pstmt.setDouble(2, price2);
 			pstmt.setInt(3, qty);
 			
 		}
@@ -84,6 +84,5 @@ public class Order_Page  extends HttpServlet
 					e.printStackTrace();
 				}
 		}
-		return;
 }
 }

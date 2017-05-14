@@ -1,13 +1,11 @@
 package org.project.shoppers;
-
 import java.io.*;
-
+import org.project.shoppers.*;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
-
-public class Electronics extends HttpServlet
+public class Food extends HttpServlet
 {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException
@@ -15,11 +13,11 @@ public class Electronics extends HttpServlet
 		resp.setContentType("image/jpg");
 		resp.setContentType("jpg/png");
 		resp.setContentType("text/html");
-		String userName = (String) req.getAttribute("uname");
-		String pageElect = (String) req.getAttribute("electronics");
+		String foodSupply = (String)req.getParameter("food");
+		req.setAttribute("food1", "food");
 		RequestDispatcher rd = req.getRequestDispatcher("/order_page");
 		rd.include(req, resp);
-		PrintWriter out=resp.getWriter();
+		PrintWriter out = resp.getWriter();
 		out.println("<!DOCTYPE html>");
 		out.println("<html lang='en'>");
 		out.println("<head>");
@@ -33,12 +31,12 @@ public class Electronics extends HttpServlet
 		out.println(" </style></head><body>");
 		out.println("<form action='Electronic' method='post'>");
 		out.println("<table border='0px'>");
-	/*	out.println("<tr>");
+		out.println("<tr>");
 		out.println("<td colspan='4'><div class='back' name='back_page_menu'><a href='userid.html'>Back</a></div></td>");
 		out.println("</tr>");
-	*/	out.println("<tr>");
-		out.println("<td><img src='images/electronics/lg.jpg'><div><a href='order.html'><span class='electronics' name='refrigerator'>Refrigerator</span></div></td>");
-		out.println("<td><img src='images/electronics/apple-laptop.jpg'><div class='electronics' name='Laptop'>Laptop</div> </td>");
+		out.println("<tr>");
+		out.println("<td><img src='images/electronics/lg.jpg'><div><a href='order.html'><span class='electronics' name='refrigerator'>Refrigerator</span></div><div name='price'>10000.00</div></td>");
+		out.println("<td><img src='images/electronics/apple-laptop.jpg'><div class='electronics' name='Laptop'><a href='order.html>Laptop</a></div> </td>");
 		out.println(" <td><img src='images/electronics/incandescent-bulb1.png'><div class='electronics' name='Bulb'>Bulb</div></td>");
 		out.println("<td><img src='images/electronics/iphone7-gallery6-2016.jpg'><div class='electronics' name='Iphone'>Iphone</div></td>");
 		out.println("</tr>");
@@ -62,5 +60,6 @@ public class Electronics extends HttpServlet
 		out.close();
 		/*RequestDispatcher rd = req.getRequestDispatcher("/order_page");
 		rd.forward(req, resp);*/
+		
 	}
 }
