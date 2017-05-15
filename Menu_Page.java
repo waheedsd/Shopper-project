@@ -45,6 +45,6 @@ public class Menu_Page extends HttpServlet {
 		out.close();
 		/*RequestDispatcher rd = req.getRequestDispatcher("/electronics_page");
 		rd.forward(req, resp);*/
-		return;
+		//return;
 	}
 }
