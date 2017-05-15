@@ -16,7 +16,6 @@ public class Order_Page  extends HttpServlet
 	
 	 String refrigerator2 = req.getParameter("refrigerator");
 	 String pricenw=req.getParameter("price");
-/*	 Double price2=Double.parseDouble(pricenw);*/
 	 int qty=1;
 	 PrintWriter out=resp.getWriter();
 	 out.println("<!DOCTYPE html>");

@@ -12,7 +12,7 @@ public class Homepage extends HttpServlet {
 		String password = req.getParameter("pword");
 		req.setAttribute("username1", userName);
 		req.setAttribute("password1", password);
-		RequestDispatcher rd = req.getRequestDispatcher("/menu_page");
+		RequestDispatcher rd = req.getRequestDispatcher("menu.html");
 		rd.forward(req, resp);
 	}
 }

@@ -24,6 +24,7 @@ public class Food extends HttpServlet
 		out.println("<meta charset='UTF-8'>");
 		out.println("<title>Electronics</title>");
 		out.println("<style>");
+		out.println("a {text-decoration: none;}");
 		out.println("  img{height: 250px;width: 328px;}");
 		out.println(" .electronics{ font-size: 30px;left:12px;top12px;font-family:Helvetica;text-align: center;font-weight: 500;}");
 		out.println(" .electronics:hover{ background-color: black;color: white;border: 2px solid;border-radius: 12px;}");
