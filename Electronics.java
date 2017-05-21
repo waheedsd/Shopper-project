@@ -30,7 +30,7 @@ public class Electronics extends HttpServlet
 		out.println("  img{height: 250px;width: 328px;}");
 		out.println(" .electronics{ font-size: 30px;left:12px;top12px;font-family:Helvetica;text-align: center;font-weight: 500;}");
 		out.println(" .electronics:hover{ background-color: black;color: white;border: 2px solid;border-radius: 12px;}");
-		out.println(".back{text-align: right; font-size: 40px;right:12px;font-family:Helvetica;font-weight: 500;background-color: black;color: white;border: 2px solid;border-radius: 12px;}");
+	//	out.println(".back{text-align: right; font-size: 40px;right:12px;font-family:Helvetica;font-weight: 500;background-color: black;color: white;border: 2px solid;border-radius: 12px;}");
 		out.println(" </style></head><body>");
 		out.println("<form action='Electronic' method='post'>");
 		out.println("<table border='0px'>");

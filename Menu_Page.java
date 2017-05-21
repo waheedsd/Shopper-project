@@ -17,8 +17,8 @@ public class Menu_Page extends HttpServlet {
 		String password = (String) req.getParameter("pword");
 		req.setAttribute("uname", "userName");
 		req.setAttribute("pword", "password");
-		RequestDispatcher rd = req.getRequestDispatcher("/electronics_page");
-		rd.include(req, resp);
+		/*RequestDispatcher rd = req.getRequestDispatcher("/home_page");
+		rd.include(req, resp);*/
 		PrintWriter out = resp.getWriter();
 		out.println("<!DOCTYPE html>");
 		out.println("<head>");
